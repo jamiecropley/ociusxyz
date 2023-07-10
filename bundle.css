@@ -1,0 +1,37 @@
+body {
+    font-family: "century-gothic", sans-serif;
+    background-color: #FBDE00;
+    color: #121212;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+a {
+    color: #121212;
+    transition: color 0.2s ease-in-out;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+a:hover {
+    color: #0091EA;
+}
+
+footer svg:hover path {
+    fill: #0091EA;
+}
+
+
+.icon-spacing {
+    margin-right: 20px;
+}
