@@ -1,5 +1,5 @@
 ---
-layout: layouts/blogpost.njk
+layout: layouts/docsdoc.njk
 title: Another docs post
 date: 2023-07-10
 ---
