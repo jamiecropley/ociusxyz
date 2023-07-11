@@ -1,3 +1,5 @@
+const { DateTime } = require('luxon');
+
 module.exports = function(eleventyConfig) {
 
     // Add a collection called "blog" that gets all files in the blog folder
@@ -15,4 +17,13 @@ module.exports = function(eleventyConfig) {
 
     // loads images
     eleventyConfig.addPassthroughCopy("img");
-};
+
+    // favucib
+    eleventyConfig.addPassthroughCopy("favicon.svg");
+
+    // Format date
+
+        eleventyConfig.addFilter('dateFormat', (dateObj) => {
+            return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('dd/MM/yyyy');
+        });
+    };
