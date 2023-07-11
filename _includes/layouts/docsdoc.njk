@@ -52,7 +52,7 @@
 <main class="center-content">
     <div class="container">
     <section id="section1">
-        <b><i><p>Last Updated:</i></b> {{ page.date | dateFormat }}</p>
+        <b><p>Last Updated:</b> {{ page.date | dateFormat }}</p>
         {{ content | safe }}
     </section>
 </main>
@@ -214,5 +214,6 @@
         </svg></a>
     </div>
 </footer>
+{% mermaid_js %}
 </body>
 </html>

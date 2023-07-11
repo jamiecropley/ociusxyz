@@ -1,3 +1,4 @@
+const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
 const { DateTime } = require('luxon');
 
 module.exports = function(eleventyConfig) {
@@ -20,6 +21,11 @@ module.exports = function(eleventyConfig) {
 
     // favucib
     eleventyConfig.addPassthroughCopy("favicon.svg");
+
+
+    // Mermaid plugin
+    eleventyConfig.addPlugin(pluginMermaid);
+
 
     // Format date
 

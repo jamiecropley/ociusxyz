@@ -15,3 +15,12 @@ Here is an inline math example: $E=mc^2$.
 Here is a block-level math example:
 
 $$\int_0^\infty e^{-x^2} dx=\frac{\sqrt{\pi}}{2}$$
+
+
+```mermaid
+graph TD;
+    A(Math Engine)-->Test1;
+    A-->Test2;
+
+```
+
