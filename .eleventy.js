@@ -1,5 +1,5 @@
-const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
 const { DateTime } = require('luxon');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(eleventyConfig) {
 
@@ -22,14 +22,38 @@ module.exports = function(eleventyConfig) {
     // favucib
     eleventyConfig.addPassthroughCopy("favicon.svg");
 
+    // Ignore Blog post / docs drafts
+    eleventyConfig.addGlobalData("eleventyComputed.permalink", function() {
+        return (data) => {
+            if(data.draft && !process.env.BUILD_DRAFTS) {
+                return false;
+            }
 
-    // Mermaid plugin
-    eleventyConfig.addPlugin(pluginMermaid);
+            return data.permalink;
+        }
+    });
 
+    eleventyConfig.addGlobalData("eleventyComputed.eleventyExcludeFromCollections", function() {
+        return (data) => {
+            if(data.draft && !process.env.BUILD_DRAFTS) {
+                return true;
+            }
+
+            return data.eleventyExcludeFromCollections;
+        }
+    });
+
+    eleventyConfig.on("eleventy.before", ({runMode}) => {
+        if(runMode === "serve" || runMode === "watch") {
+            process.env.BUILD_DRAFTS = true;
+        }
+    });
+
+    // Syntax highlighting
+    eleventyConfig.addPlugin(syntaxHighlight);
 
     // Format date
-
-        eleventyConfig.addFilter('dateFormat', (dateObj) => {
-            return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('dd/MM/yyyy');
-        });
-    };
+    eleventyConfig.addFilter('dateFormat', (dateObj) => {
+        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('dd/MM/yyyy');
+    });
+};

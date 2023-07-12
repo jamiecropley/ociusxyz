@@ -5,17 +5,18 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf _site",
-    "build": "npm run clean && eleventy"
+    "build": "npm run clean && eleventy",
+    "build:drafts": "BUILD_DRAFTS=true eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "rimraf": "^5.0.1"
   },
   "dependencies": {
-    "@kevingimbel/eleventy-plugin-mermaid": "^2.1.0",
     "luxon": "^3.3.0"
   }
 }

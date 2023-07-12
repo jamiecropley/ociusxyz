@@ -1,64 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ocius</title>
-    <link rel="stylesheet" href="/bundle.css">
-    <link rel="stylesheet" href="https://use.typekit.net/nps3acu.css">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-<!-- The below code is different to every other page on the site but the same as docsdoc -->
+{% include "layouts/headmd.njk" %}
+<!-- This code is different to every other page on the site but the same as docsdoc -->
 <body>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    },
-    svg: {
-      fontCache: 'global'
-    }
-  };
-</script>
 <div class="center-wrapper">
-<header class="center-content">
-    <a href="/">
-    <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="128"
-            height="128"
-            viewBox="0 0 128 128"
-            fill="none"
-    >
-        <path fill="#121212" d="M39.578 16.717H124l-35.578 39.16H4l35.578-39.16ZM39.578 72.122H124l-35.578 39.161H4l35.578-39.161Z"/>
-    </svg></a>
-    <div class="page-title"><a href="/"><h1>ocius</h1></a></div>
-
-</header>
-
-<hr>
-<nav class="center-content">
-    <ul>
-        <li><a href="/">home</a></li>
-        <li><a href="/blog">blog</a></li>
-        <li><a href="/docs">docs</a></li>
-        <li><a href="/download">download</a></li>
-        <li><a href="/donate">donate</a></li>
-    </ul>
-</nav>
-<hr>
-<main class="center-content">
-    <div class="container">
-    <section id="section1">
-        <b><p>Last Updated:</b> {{ page.date | dateFormat }}</p>
-        {{ content | safe }}
-    </section>
+{% include "layouts/header.njk" %}
+{% include "layouts/nav.njk" %}
+<main class="center-content-md">
+<div class="container">
+<section id="section1">
+<b><p>Last Updated:</b> {{ page.date | dateFormat }}</p>
+{{ content | safe }}
+</section>
 </main>
 <hr>
 </div>
 {% include "layouts/footer.njk" %}
-{% mermaid_js %}
 </body>
 </html>
