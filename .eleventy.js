@@ -19,7 +19,7 @@ module.exports = function(eleventyConfig) {
     // loads images
     eleventyConfig.addPassthroughCopy("img");
 
-    // favucib
+    // favicon
     eleventyConfig.addPassthroughCopy("favicon.svg");
 
     // Ignore Blog post / docs drafts
