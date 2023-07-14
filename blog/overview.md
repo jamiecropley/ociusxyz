@@ -2,7 +2,7 @@
 draft: false
 layout: layouts/blogpost.njk
 title: Game Engine Overview
-date: 2023-07-13
+date: 2023-07-14
 ---
 
 # Game Engine Overview
@@ -12,7 +12,9 @@ Just a run down of the components of the engine.
 In order that I am going to do them:
 
 - Engine Control
+  - Window Render (GLFW, SDL, or FreeGLUT?)
   - Game Loop
+  - Graphics API Initial Setup (OpenGL)
 - Math Engine
   - Vector Class
     - Vector Addition
@@ -27,7 +29,7 @@ In order that I am going to do them:
   - Future (Not important for now):
     - Quaternion & Dual-Quaternion operations
 - Rendering Engine
-  - Graphics API (OpenGL, DirectX or Vulkan?)
+  - Graphics API (OpenGL)
   - Shaders
   - Rasterizer
   - Texture Mapping
