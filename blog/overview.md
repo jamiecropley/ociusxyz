@@ -12,9 +12,9 @@ Just a run down of the components of the engine.
 In order that I am going to do them:
 
 - Engine Control
-  - Window Render (GLFW, SDL, or FreeGLUT?)
-  - Game Loop
+  - Window Render (GLFW)
   - Graphics API Initial Setup (OpenGL)
+  - Game Loop
 - Math Engine
   - Vector Class
     - Vector Addition
