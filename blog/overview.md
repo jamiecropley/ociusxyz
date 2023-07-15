@@ -81,4 +81,6 @@ In order that I am going to do them:
 - Editor
 
 
-Overall this is a rough list to get me started and I will most likely change it as I am creating the engine as need be. I think at the moment my main goal with the engine as well is it make a very basic game, my main goal at the moment is to have a first person controller / camera entity walking around a level in 3D.
+Overall this is a rough list to get me started and I will most likely change it as I am creating the engine as need be. 
+
+I think at the moment my main goal with the engine as well is it make a very basic game, my main goal at the moment is to have a first person controller / camera entity walking around a level in 3D.
