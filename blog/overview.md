@@ -2,7 +2,7 @@
 draft: false
 layout: layouts/blogpost.njk
 title: Game Engine Overview
-date: 2023-07-15
+date: 2023-07-14
 ---
 
 # Game Engine Overview
@@ -13,7 +13,7 @@ In order that I am going to do them:
 
 - Engine Control
   - Window Render (GLFW)
-  - Graphics API Initial Setup (Vulkan)
+  - Graphics API Initial Setup (OpenGL)
   - Game Loop
 - Math Engine
   - Vector Class
@@ -81,4 +81,4 @@ In order that I am going to do them:
 - Editor
 
 
-Overall this is a rough list to get me started and I will most likely change it as I am creating the engine as need be.
+Overall this is a rough list to get me started and I will most likely change it as I am creating the engine as need be. I think at the moment my main goal with the engine as well is it make a very basic game, my main goal at the moment is to have a first person controller / camera entity walking around a level in 3D.
