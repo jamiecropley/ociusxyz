@@ -2,7 +2,7 @@
 draft: false
 layout: layouts/blogpost.njk
 title: Game Engine Overview
-date: 2023-07-14
+date: 2023-07-15
 ---
 
 # Game Engine Overview
@@ -13,7 +13,7 @@ In order that I am going to do them:
 
 - Engine Control
   - Window Render (GLFW)
-  - Graphics API Initial Setup (OpenGL)
+  - Graphics API Initial Setup (Vulkan)
   - Game Loop
 - Math Engine
   - Vector Class
