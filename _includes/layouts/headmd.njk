@@ -10,25 +10,39 @@
 <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
 
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <!-- MathJax Begin: -->
+    <!-- Inline code so it ensures it loads in the correct order. -->
 
-<script>
-window.MathJax = {
-  loader: {
-    load: ['input/asciimath', 'input/tex', 'output/chtml', 'ui/menu']
-  },
-  asciimath: {
-    delimiters: [['$','$'], ['`','`']]
-  },
-  tex: {
-    inlineMath: [['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']],
-  }
-};
-</script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js">
-</script>
+    <script type = "text/x-mathjax-config">
+        MathJax.Hub.Config({
+            showMathMenu: false,
+            jax: ["input/TeX", "input/AsciiMath", "output/PlainSource"],
+            PlainSource: {
+                styles: {
+                    ".MathJax_PlainSource_Display": {
+                        "text-align": "center",
+                        margin: ".75em 0px",
+                        "white-space": "pre"
+                    }
+                }
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['\\[', '\\]']
+                ],
+                processEscapes: true
+            }
+        }); </script>
+
+
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <!-- Original config was 'TeX-AMS_HTML' for the above -->
+    <!-- MathJax End. -->
 
 
 

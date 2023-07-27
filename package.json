@@ -17,6 +17,7 @@
     "rimraf": "^5.0.1"
   },
   "dependencies": {
-    "luxon": "^3.3.0"
+    "luxon": "^3.3.0",
+    "mathjax": "^2.7.9"
   }
 }
