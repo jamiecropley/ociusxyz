@@ -1,7 +1,6 @@
 {
   "name": "ociusxyz",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf _site",
@@ -19,5 +18,9 @@
   "dependencies": {
     "luxon": "^3.3.0",
     "mathjax": "^2.7.9"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "description": ""
 }
